@@ -4,7 +4,7 @@ from .models import Seller, Customer, Product, Order
 
 @admin.register(Seller)
 class SellerAdmin(admin.ModelAdmin):
-    list_display = ['seller_id', 'name', 'brand', 'model', 'description', 'price', 'category', 'date']
+    list_display = ['name', 'email', 'phone', 'description', 'address', 'password', 'category', 'subcategory']
 
 
 @admin.register(Customer)

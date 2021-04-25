@@ -1,3 +1,4 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,13 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../static/css/home.css">
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/base.css">
 
-        
-        <title>TheShoppingCArt</title>
-        
+    {% block css %}{% endblock %}
+    
+    
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>{% block title %}{% endblock %}</title>
+     
 </head>
 
 <body>
@@ -52,287 +56,24 @@
                             </a><span>0</span></button>
                     </li>
                 </ul>
-            </div>
-            
+            </div>           
         </nav>
-        
-        <nav class="nav2">
-            <ul>
-                <li><a href="#">Electronics</a></li>
-                <li><a href="#">TV & Appliances</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Womens</a></li>
-                <li><a href="#">Baby & Kids</a></li>
-                <li><a href="#">Computers</a></li>
-                <li><a href="#">Phones & Tablets</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">More</a></li>
-            </ul>
-        </nav>
+
+        {% block nav %}
+            <!-- Second Navigation -->
+        {% endblock %}
+
     </header>
 
     <!-- ***********************MAIN SECTION**************************** -->
     <main>
         
-        <!-- ****************CAROUSEL********************* -->
-        <div class="carousel">
-            
-            <div class="prev-btn">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </div>
-            
-            <div class="slides-container">
+                {% block main %}
                 
-                <div class="slide-image">
-                    <img src="../static/img_carousal_1.jpg" alt="">
-                </div>
-                <div class="slide-image">
-                    <img src="../static/img_carousal_1.jpg" alt="">
-                </div>
-                <div class="slide-image">
-                    <img src="../static/img_carousal_1.jpg" alt="">
-                </div>
+                <!-- Write your HTML in main block of other templates -->
+                
+                {% endblock %}      
 
-            </div>
-            
-            <div class="next-btn">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </div>
-        </div>
-
-        <!-- ****************PRODUCTS**************** -->
-        <div class="container">
-
-            <h2>New Arrivals</h2>
-            <div class="items">
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div>
-                    <p>
-                        <button class="load-more-btn">Load more...</button>
-                    </p>
-                </div>
-            </div>
-            
-        </div>
-
-        
-        <div class="container">
-            
-            <h2>Trending</h2>
-            <div class="items">
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div>
-                    <p>
-                        <button class="load-more-btn">Load more...</button>
-                    </p>
-                </div>
-            </div>
-
-        </div>
-        
-        <div class="container">
-
-            <h2>Party Wear</h2>
-            <div class="items">
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div class="item">
-                    <p><img src="../static/img_product.jpg" alt="product"></p>
-                    <p>Title</p>
-                    <p>subtitle</p>
-                    <p>description</p>
-                    <p>price</p>
-                    <p><button class="cart-btn"> Add to Cart</button></p>
-                </div>
-                <div>
-                    <p>
-                        <button class="load-more-btn">Load more...</button>
-                    </p>
-                </div>
-            </div>
-
-        </div>
         
     </main>
     
@@ -382,6 +123,9 @@
 
 
     <script src="../static/script/main.js"></script>
+
+    {% block js %} <!-- Include your js file in this block -->  {% endblock%}
+
 </body>
 
 </html>

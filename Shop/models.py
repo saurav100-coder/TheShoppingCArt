@@ -67,18 +67,17 @@ class Seller(models.Model):
     seller_id = models.IntegerField(
         primary_key=True, blank=False, auto_created=True)
     name = models.CharField(max_length=50)
-    brand = models.CharField(max_length=50)
-    model = models.CharField(max_length=100)
+    email = models.EmailField(max_length=50)
+    phone = models.CharField(max_length=12)
     description = models.TextField(max_length=500)
-    price = models.IntegerField(blank=False)
-    discount = models.IntegerField()
+    address = models.TextField(max_length=500)
+    password = models.CharField(max_length=20)
     category = models.CharField(max_length=100)
     subcategory = models.CharField(max_length=100)
     date = models.DateField(auto_now_add=True)
 
     def __str__(self):
-        return self.name
-
+        return self.seller_id
 
 class Customer(models.Model):
     customer_id = models.IntegerField(
@@ -87,13 +86,11 @@ class Customer(models.Model):
     email = models.EmailField(max_length=50)
     phone = models.CharField(max_length=10)
     address = models.TextField(max_length=500)
-    price = models.IntegerField(blank=False)
-    category = models.CharField(max_length=100)
-    subcategory = models.CharField(max_length=100)
-    date = models.DateField(auto_now_add=True)
+    password = models.CharField(max_length=20)
+    date = models.DateField(auto_now_add=True, editable=False)
 
     def __str__(self):
-        return self.name
+        return str(self.customer_id)
 
 
 class Product(models.Model):
@@ -104,6 +101,7 @@ class Product(models.Model):
     model = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
     price = models.IntegerField(blank=False)
+    is_discount = models.BooleanField(default=False)
     discount = models.IntegerField()
     category = models.CharField(max_length=100)
     subcategory = models.CharField(max_length=100)
@@ -115,7 +113,7 @@ class Product(models.Model):
     image = models.ImageField(upload_to = 'product/', blank=True)   #need to install pillow to store image
 
     def __str__(self):
-        return self.name
+        return self.product_id
 
 
 class Order(models.Model):
