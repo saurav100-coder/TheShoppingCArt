@@ -7,9 +7,9 @@
 ### 1. Install Python 3.9.2
 [Python 3.9.2](https://www.python.org/ftp/python/3.9.4/python-3.9.4-amd64.exe 'Click here to install Python')
 
-### 2. Clone the repository in your folder/github
+### 2. Clone the repository
 ```powershell
-git clone https://github.com/<repolink here ...>
+git clone https://github.com/KumarSantosh22/TheShoppingCArt.git
 ```
 
 ### 3. Create a Virtual Environment for the Project
