@@ -1,0 +1,169 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-clr: rgb(6, 13, 109);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* NAVBAR SECTION */
+.nav1 {
+  display: flex;
+  flex-direction: row;
+  /* background-color: rgb(6, 13, 109); */
+  background-color: var(--bg-clr);
+  height: 1%;
+  color: white;
+  width: 100%;
+}
+
+.nav1 ul {
+  display:flex;
+}
+
+#logo {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgb(241, 233, 233);
+  border-radius: 1px;
+  margin: 1px 0.5px;
+  margin-top: 0.5rem;
+  padding: 1px 0.5px;
+}
+
+.nav1 h1 {
+  padding: 0.5rem 0.5rem;
+}
+
+.nav1 input {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  line-height: 2rem;
+  margin: 0.23rem 0.5rem;
+  padding: 0.1rem 0.5rem;
+  width: 200%;
+}
+.nav1 form{
+    display: inline-flex;
+}
+
+#search-btn {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  line-height: 2rem;
+  margin: 0.23rem 0.5rem;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0px;
+}
+
+.nav1 h2 {
+  padding: 0.5rem 0.5rem;
+  float: left;
+  margin-left: 3rem;
+}
+
+.login-btn {
+  background-color: rgb(6, 13, 109);
+  color: white;
+  width: 3rem;
+  height: 2rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.login-btn:hover {
+  background-color: rgb(11, 23, 187);
+  border-radius: 10px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.navbar div {
+  display: flex;
+  position: absolute;
+  float: right;
+  right: 0px;
+}
+
+/* MENU ITEMS */
+.nav2 {
+  display: flex;
+  background-color: rgb(249, 251, 255);
+  margin: 1px;
+}
+.nav2 ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.nav2 ul li {
+  margin: 0.1rem;
+  padding: 1.5rem;
+}
+.nav2 ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.nav2 ul li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(85, 96, 255);
+  font-size: 1.2em;
+  border-radius: 0.2em;
+  padding: 0.1em;
+}
+
+
+/* NAV INNER LIST  */
+.inner-nav ul {
+  display: none;
+}
+
+.inner-nav ul, .login-btn:hover{
+  display: block;
+  position: absolute;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+/* FOOTER SECTION */
+
+footer{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  background-color: var(--bg-clr);
+  color: white;
+  padding: 0.5em;
+  margin-top: .011em;
+  justify-content: center;
+}
+
+.footer a{
+  display: block;
+  margin: 0em  5em;
+  padding: 0.1em;
+}
+
+footer div{
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+footer h2 {
+  text-align: center;
+}
+
+.footer a:first-child{
+  cursor: context-menu;
+}

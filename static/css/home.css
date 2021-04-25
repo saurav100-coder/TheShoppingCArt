@@ -1,0 +1,288 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --bgcolor: rgb(9, 4, 88);
+}
+
+/* *****************************NAVBAR SECTION*************************************** */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  background-color: var(--bgcolor);
+  color: white;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgb(241, 233, 233);
+  border-radius: 1px;
+  margin: 1px 0.5px;
+  margin-top: 0.5rem;
+  padding: 1px 0.5px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  padding: 0.1rem 1rem;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.nav-left {
+  float: left;
+  top: 0px;
+  left: 0px;
+}
+
+.nav-item-1 li form {
+  display: inline-flex;
+}
+.nav-item-1 li form input {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 35vw;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.login-btn {
+  background-color: var(--bgcolor);
+  width: 3rem;
+  height: 2rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+.login-btn a,
+span {
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: rgb(11, 23, 187);
+  border-radius: 10px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+#search-btn {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin: 0.5rem;
+  padding: 0.1rem 0.5rem;
+  margin-left: 0px;
+  height: 2.8rem;
+}
+
+/* ******************************NAV INNER**********************************  */
+.nav2 {
+  display: flex;
+  background-color: rgba(218, 220, 224, 0.452);
+  margin: 2px 0px;
+}
+.nav2 ul {
+  display: inline-flex;
+  flex-direction: row;
+  list-style: none;
+}
+.nav2 ul li {
+  margin: 0.1rem;
+  padding: 0.9rem;
+}
+.nav2 ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 0.6em;
+}
+
+.nav2 ul li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(85, 96, 255);
+  font-size: 0.7em;
+  border-radius: 0.2em;
+  padding: 0.1em;
+}
+
+/* *************************MAIN CONTENT********************************************************  */
+
+/* ***********Carousel**************  */
+.carousel {
+width: 100%;
+}
+
+.slides-container {
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev-btn,
+.next-btn {
+  background: #eee;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
+  background: #48f9ff;
+}
+
+.prev-btn {
+  left: 0px;
+}
+
+.next-btn {
+  right: 0px;
+}
+
+
+/* ****************Items************* */
+.container {
+  display: flex;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 1rem 0px;
+  padding: 1.2rem 0px;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.container h2 {
+  color: #fff;
+  width: 100%;
+  background-color: rgb(0, 119, 255);
+  text-align: center;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  margin: 1rem 2rem;
+  padding: 1rem 1rem;
+  border: 2px solid blue;
+  border-radius: 0.5rem;
+}
+
+/* *********load-more-btn*************** */
+.load-more-btn{
+  margin: 0.1rem;
+  padding: .3rem 0.5rem;
+  background-color: blue;
+  color: #eee;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  letter-spacing: .1rem;
+  outline: none;
+}
+
+
+/* *********Cart-Button*************** */
+.cart-btn {
+  margin: 1px;
+  padding: .4rem;
+  color: #fff;
+  background-color: rgba(0, 0, 255);
+  outline: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* ********************************FOOTER******************************  */
+footer {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  background-color: var(--bgcolor);
+  color: white;
+  padding: 0.5em;
+  margin-top: 0.011em;
+  justify-content: center;
+}
+
+.footer a {
+  color: #fff;
+  display: block;
+  margin: 0em 5em;
+  padding: 0.1em;
+}
+
+footer div {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+footer h2 {
+  text-align: center;
+}
+
+.footer a:first-child {
+  cursor: context-menu;
+}
+
+#footer-bottom {
+  height: 0.8rem;
+  padding-top: 0px;
+}
+
+/* ********************************RESPONSIVE DESIGN******************************  */
+/* Media Query */
+@media only screen and (min-width: 1156px) {
+  .nav-right {
+    position: absolute;
+    float: right;
+    top: 0px;
+    right: 0px;
+  }
+}
+
+
+/*  */

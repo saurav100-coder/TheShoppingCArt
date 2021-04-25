@@ -1,0 +1,6 @@
+# product image size = 200x150
+
+# carousel image size = 1500x400
+
+# _____  image size =  ______
+
