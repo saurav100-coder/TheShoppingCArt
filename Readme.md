@@ -24,11 +24,11 @@ python -m venv EComVenv
 ```
 > To activate the virtual environment use the following command using cmd
 ```cmd
-source EComVenv/bin/activate
+./EComVenv/bin/activate.bat
 ```
 > To activate the virtual environment use the following command using bash
 ```cmd
-EComVenv/Scripts\activate.bat
+source EComVenv/bin/activate
 ```
 
 #### Note : 
@@ -49,7 +49,7 @@ EComVenv/Scripts\activate.bat
 ### Note : 
     Please maintain comments so that it can help other to understand and contribute to the project.
 
-## _Directions for Front End Developer_
+## _Directions for Back End Developer_
     1. Write clean code
     2. Add comments whenever necessary or required
 
