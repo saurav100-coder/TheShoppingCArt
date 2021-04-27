@@ -6,7 +6,14 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
     path('careers', views.careers, name='careers'),
-    path('register', views.get_customer, name='get_customer'),
     path('error', views.page_not_found, name='error'),
+    # registerion urls
+    path('signupuser', views.signup_user, name='signup_user'),
+    path('signupcustomer', views.signup_customer, name='signup_customer'),
+    path('signupseller', views.signup_seller, name='signup_seller'),
+    # login urls
+    path('login', views.login, name='login'),
+
+    # test page urls
     path('test', views.test_page, name='test'),
  ]

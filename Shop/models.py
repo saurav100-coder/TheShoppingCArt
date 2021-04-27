@@ -28,7 +28,7 @@ class Seller(models.Model):
     email = models.EmailField(max_length=50)
     phone = models.CharField(max_length=12)
     description = models.TextField(max_length=300)
-    gstinfo = models.CharField(max_length=50)
+    gstin = models.CharField(max_length=50)
     password = models.CharField(max_length=20)
     reg_date = models.DateField(auto_now_add=True)
 

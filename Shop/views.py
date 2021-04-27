@@ -4,7 +4,6 @@ import datetime
 
 from .models import Seller, Customer
 from .forms import CustomerForm, SellerForm
-# Create your views here.
 
 
 def home(request):
@@ -29,7 +28,17 @@ def page_not_found(request):
     return HttpResponse(html)
 
 
-def get_customer(request):
+# USER, SELLER, CUSTOMER AUTHENTICATION AND AUTHORIZATION MANAGEMENT
+
+def login(request):
+    return HttpResponse("user login")
+
+
+def signup_user(request):
+    return HttpResponse("user")
+
+
+def signup_customer(request):
     form = CustomerForm()
     if request.method == 'POST':
         form = CustomerForm(request.POST)
@@ -39,13 +48,29 @@ def get_customer(request):
             phone = form.cleaned_data['phone']
             address = form.cleaned_data['address']
             password = form.cleaned_data['password']
-            customer = Customer(name=name, email=email, phone=phone, address=address, password=password)
+            customer = Customer(name=name, email=email,
+                                phone=phone, address=address, password=password)
             customer.save()
             return redirect('home')
 
     return render(request, 'signup_customer.html', {'form': form})
 
 
+def signup_seller(request):
+    return HttpResponse("Sller")
+
+
+def logout(request):
+    pass
+
+
+# PRODUCT MANAGEMENT
+
+def products(request):
+    return HttpResponse("products")
+
+
+# Test Page for Front End Developer
 
 def test_page(request):
     return render(request, 'about/careers.html')
