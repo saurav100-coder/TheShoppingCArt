@@ -2,17 +2,41 @@ from django.db import models
 
 
 class Seller(models.Model):
+
+    CATEGORY_CHOICES = (
+        ('Wholesaler', 'Wholesaler'),
+        ('Distributer', 'Distributer'),
+        ('Retailer', 'Retailer'),
+        ('Others', 'Others'),
+    )
+    SUBCATEGORY_CHOICES = (
+        ('Electronics', 'Electronics'),
+        ('TV & Appliances', 'TV & Appliances'),
+        ('Men', 'Men'),
+        ('Women', 'Women'),
+        ('Baby & Kids', 'Baby & Kids'),
+        ('Computers', 'Computers'),
+        ('Phones & Tablets', 'Phones & Tablets'),
+        ('Books', 'Books'),
+        ('Accessories', 'Accessories'),
+        ('Others', 'Others'),
+    )
+
     seller_id = models.IntegerField(
         primary_key=True, blank=False, auto_created=True)
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     phone = models.CharField(max_length=12)
-    description = models.TextField(max_length=500)
-    address = models.TextField(max_length=500)
+    description = models.TextField(max_length=300)
+    gstinfo = models.CharField(max_length=50)
     password = models.CharField(max_length=20)
-    category = models.CharField(max_length=100)
-    subcategory = models.CharField(max_length=100)
-    date = models.DateField(auto_now_add=True)
+    reg_date = models.DateField(auto_now_add=True)
+
+    category = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
+    subcategory = models.CharField(max_length=100, choices=SUBCATEGORY_CHOICES)
+    address = models.TextField(max_length=250)
+    permanent_address = models.TextField(max_length=250)
+    shop_address = models.TextField(max_length=250)
 
     def __str__(self):
         return str(self.seller_id)
@@ -26,7 +50,8 @@ class Customer(models.Model):
     phone = models.CharField(max_length=10)
     address = models.TextField(max_length=500)
     password = models.CharField(max_length=20)
-    date = models.DateField(auto_now_add=True, editable=False)
+    delievery_address = models.TextField(max_length=250)
+    reg_date = models.DateField(auto_now_add=True, editable=False)
 
     def __str__(self):
         return str(self.customer_id)
@@ -131,10 +156,9 @@ class Product(models.Model):
     subcategory = models.CharField(max_length=100, choices=SUBCATEGORY_CHOICES)
     season = models.CharField(max_length=20, choices=SEASON_CHOICES)
     type = models.CharField(max_length=20, choices=TYPE_CHOICES)
-    date = models.DateField(auto_now_add=True)
+    exp_date = models.DateField(default=None, null=True)
 
     seller_id = models.ForeignKey(Seller, on_delete=models.CASCADE)
-    # need to install pillow to store image
     image = models.ImageField(upload_to='product/', blank=True)
 
     def __str__(self):
@@ -142,18 +166,29 @@ class Product(models.Model):
 
 
 class Order(models.Model):
+
+    STATUS_CHOICES = (
+        ('NA', '--Not-Available--'),
+        ('1', 'Shipped'),
+        ('2', 'Out For Delivery'),
+        ('3', 'Arrived'),
+        ('9', 'Cancelled'),
+    )
     order_id = models.IntegerField(
         primary_key=True, blank=False, auto_created=True)
-    status1 = models.CharField(max_length=150)
-    status2 = models.CharField(max_length=150)
-    status3 = models.CharField(max_length=150)
-    status4 = models.CharField(max_length=150)
+    status1 = models.CharField(max_length=20, choices=STATUS_CHOICES)
+    status2 = models.CharField(max_length=20, choices=STATUS_CHOICES)
+    status3 = models.CharField(max_length=20, choices=STATUS_CHOICES)
+    status4 = models.CharField(max_length=20, choices=STATUS_CHOICES)
     invoice = models.IntegerField()
     no_of_items = models.IntegerField()
     order_date = models.DateField(auto_now_add=True)
     shipping_date = models.DateField(auto_now_add=False)
     shipping_address = models.TextField(max_length=250)
+
     is_shipped = models.BooleanField(default=False)
+    is_cancelled = models.BooleanField(default=False)
+    is_delivered = models.BooleanField(default=False)
 
     productid = models.ForeignKey(Product, on_delete=models.CASCADE)
     customerid = models.ForeignKey(Customer, on_delete=models.CASCADE)
