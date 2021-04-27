@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages
 import datetime
+from django.contrib.auth.models import User
 
 from .models import Seller, Customer
 from .forms import CustomerForm, SellerForm
