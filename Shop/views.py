@@ -64,10 +64,46 @@ def logout(request):
     pass
 
 
-# PRODUCT MANAGEMENT
+# PRODUCT MANAGEMENT FOR EACH CATEGORY
 
 def products(request):
     return HttpResponse("products")
+
+
+def products_electronics(request):
+    return HttpResponse("")
+
+
+def product_tv_appliances(request):
+    pass
+
+
+def products_men(request):
+    pass
+
+
+def products_women(request):
+    pass
+
+
+def products_kids(request):
+    pass
+
+
+def products_pc(request):
+    pass
+
+
+def products_phones(request):
+    pass
+
+
+def products_books(request):
+    pass
+
+
+def products_(accessories):
+    pass
 
 
 # Test Page for Front End Developer

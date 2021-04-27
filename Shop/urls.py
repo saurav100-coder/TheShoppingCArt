@@ -16,4 +16,4 @@ urlpatterns = [
 
     # test page urls
     path('test', views.test_page, name='test'),
- ]
+]
