@@ -43,7 +43,7 @@ def get_customer(request):
             customer.save()
             return redirect('home')
 
-    return render(request, 'customer_register.html', {'form' : form})
+    return render(request, 'signup_customer.html', {'form': form})
 
 
 
