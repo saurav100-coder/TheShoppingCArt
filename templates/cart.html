@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}"> {% endblock %}
+<!-- Add your css link here  -->
+
+{% block title %}CArt{% endblock %}
+<!-- Add your title here -->
+
+{% block main %}
+
+    <div class="c-head">
+        <h2>Cart Items</h2>
+    </div>
+
+    <div class="cart">
+        <table>
+            <thead>
+                <tr>
+                    <td>S.No.</td>
+                    <td>Item</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1.</td>
+                    <td>Item 1</td>
+                    <td>2</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Item 1</td>
+                    <td>2</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <button type="submit">Checkout</button>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+<!-- Add your inline javascript here  -->
+{% endblock%}

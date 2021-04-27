@@ -27,8 +27,8 @@
             <div class="nav-left">
                 <ul class="nav-item-1">
 
-                    <li><img id="logo" src="../static/logo.png" alt="" class="logo"></li>
-                    <li>TheShoppingCArt</li>
+                    <li><img id="logo" src="{% static 'logo.png' %}" alt="" class="logo"></li>
+                    <li><a style="color:white;" href="{% url 'home' %}">TheShoppingCArt</a></li>
                     <li>
                         <form action="">
                             <input type="text" name="search-box"
@@ -44,15 +44,15 @@
                 <ul class="nav-item-2">
                     <li>
                         <i class="fa fa-user" aria-hidden="true"></i><button class="login-btn"><a
-                                href="../templates/login.html">Login</a></button>
+                                href="{% url 'login' %}">Login</a></button>
                             </li>
                     <li>
                         <i class="fa fa-caret-down" aria-hidden="true"></i><button class="login-btn"><a
-                            href="../static/cart.png">More</a></button>
+                            href="{% static 'cart.png' %}">More</a></button>
                     </li>
                     <li>
                         <i class="fa fa-cart-plus" aria-hidden="true"></i><button class="login-btn"><a
-                                href="../static/cart.png">Cart
+                                href="{% url 'checkout' %}">Cart
                             </a><span>0</span></button>
                     </li>
                 </ul>

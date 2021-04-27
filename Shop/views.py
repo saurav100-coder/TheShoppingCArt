@@ -32,7 +32,7 @@ def page_not_found(request):
 # USER, SELLER, CUSTOMER AUTHENTICATION AND AUTHORIZATION MANAGEMENT
 
 def login(request):
-    return HttpResponse("user login")
+    return render(request, 'login.html')
 
 
 def signup_user(request):
@@ -105,6 +105,12 @@ def products_books(request):
 
 def products_(accessories):
     pass
+
+
+# CART ITEMS
+def checkout(request):
+    return render(request, 'cart.html')
+
 
 
 # Test Page for Front End Developer

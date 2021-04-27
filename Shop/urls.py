@@ -13,6 +13,8 @@ urlpatterns = [
     path('signupseller', views.signup_seller, name='signup_seller'),
     # login urls
     path('login', views.login, name='login'),
+    # cart
+    path('checkout', views.checkout, name='checkout'),
 
     # test page urls
     path('test', views.test_page, name='test'),
