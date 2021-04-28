@@ -60,7 +60,7 @@ source EComVenv/bin/activate
 
 ## Contributers
 
-[Santosh Kumar](https://www.github.com/kumarsantosh22/ 'Click here to visit my github profile')
-[Saurav Kumar]()
-[Anish Tiwari]()
+[Santosh Kumar](https://www.github.com/kumarsantosh22/ 'Click here to visit Santosh Kumar's github profile')
+[Saurav Kumar](https://github.com/saurav100-coder/ 'Click here to visit Saurav github profile')
+[Anish Tiwari](https://github.com/anishtiwari09/ 'Click here to visit Anish github profile')
 [Piyush Sharma]()
