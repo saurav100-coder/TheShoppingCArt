@@ -116,4 +116,4 @@ def checkout(request):
 # Test Page for Front End Developer
 
 def test_page(request):
-    return render(request, 'about/careers.html')
+    return render(request, 'about/about.html')

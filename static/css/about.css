@@ -1,0 +1,11 @@
+.about{
+    margin: 1ram .5ram;
+    padding: .5em .2em;
+
+}
+.about h2{
+    color : black;
+}
+.about p{
+    color:aqua;
+}
